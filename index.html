@@ -28,19 +28,45 @@
 
 	<style>
 		:root {
-			--primary-color: #0055C7;
-			--primary-hover: #0149A9;
-			--primary-rgb: 0, 85, 199;
-			--secondary-color: #FDB62F;
-			--secondary-hover: #eca826;
-			--secondary-rgb: 253, 182, 47;
+			--primary-color: #ff6575;
+			--primary-hover: #e72f41;
+			--primary-rgb: 255, 101, 117;
+			--secondary-color: #b4a7f5;
+			--secondary-hover: #392C7D;
+			--secondary-rgb: 180, 167, 245;
 		}
 	</style>
 </head>
 <body>
+<header class="header" id="header">
+	<div class="container">
+		<div class="row g-4">
+			<div class="col-lg-3">
+				<a class="header-logo hstack" href="./">
+					<img src="./assets/images/logo.svg" height="37" width="160" class="mw-100 w-auto" alt="">
+				</a>
+			</div>
+			<div class="col-lg-3">
+				<div class="header-toolbar">
+					<div class="header-user position-relative hstack gap-15px">
+						<a href="./dang-nhap.html" class="button-user button-login">
+							Đăng nhập
+						</a>
+						<a href="./dang-ky.html" class="button-user button-register">
+							Đăng ký
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
 <div id="main" class="main">
+	<div class="section-banner background-cover" style="background-image:url('./assets/images/background-banner.png')">
 
+	</div>
 </div>
+<footer class="footer" id="footer"></footer>
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
 <script type="text/javascript"
         src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
