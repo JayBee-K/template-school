@@ -161,6 +161,38 @@ const handleSwiper = function (elm, obj = {}) {
 	});
 }
 
+
+const handleCounter = function () {
+	if ($('.handleCounter').length && $('.handleCounter .handleCounterItem').length) {
+		const formatPrice = function (price, format = '.') {
+			price = price.replace(/[^0-9]/g, '');
+			price = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, format);
+			return price;
+		}
+
+		let i = 0;
+		$(window).scroll(function () {
+			let counterOffsetTop = $('.handleCounter').offset().top - window.innerHeight;
+			if (i === 0 && $(window).scrollTop() > counterOffsetTop) {
+				$('.handleCounter .handleCounterItem').each(function () {
+					let counterItem = $(this),
+						counterItemValue = counterItem.attr('data-value'),
+						counterItemFormat = counterItem.attr('data-format'),
+						counterItemDecor = counterItem.attr('data-decor') ?? '';
+					$({countNum: counterItem.text()}).animate({countNum: counterItemValue}, {
+						duration: 2000, easing: 'swing', step: function () {
+							counterItem.text(Math.floor(this.countNum));
+						}, complete: function () {
+							counterItem.html(formatPrice(this.countNum.toString(), counterItemFormat) + ((counterItemDecor != '') ? counterItemDecor : ''));
+						}
+					});
+				});
+				i = 1;
+			}
+		});
+	}
+}
+
 $(function () {
 	handleApplyCollapse($('#header-navigation > ul'), true, true);
 	handleCallMenu();
@@ -171,4 +203,5 @@ $(function () {
 
 	handleStickHeader();
 	handleCopyValue();
+	handleCounter();
 });

@@ -303,3 +303,31 @@
 .section-banner .banner-content .banner-form .banner-form_inner .link-default:hover {
 	background: var(--primary-hover);
 }
+
+.section-banner .banner-content .banner-counter {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	margin-top: 15px;
+}
+
+.section-banner .banner-content .banner-counter .banner-counter_item {
+	min-width: 15%;
+	display: flex;
+	align-items: center;
+}
+
+.section-banner .banner-content .banner-counter .banner-counter_item {
+	color: var(--text-primary);
+	font-weight: 700;
+	font-size: 3.45em;
+}
+
+.section-banner .banner-content .banner-counter .banner-counter_item .banner-counter_item__icon {
+	font-size:16px;
+	color: #ffb54a;
+	margin-left: 15px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
