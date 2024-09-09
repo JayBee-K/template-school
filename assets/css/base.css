@@ -12,7 +12,7 @@ body {
 	color: var(--text-secondary);
 	font-family: var(--font-theme);
 	font-size: var(--size-theme);
-	font-weight: 500;
+	font-weight: 400;
 	font-style: normal;
 	background-color: #fff;
 }

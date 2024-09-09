@@ -324,10 +324,33 @@
 }
 
 .section-banner .banner-content .banner-counter .banner-counter_item .banner-counter_item__icon {
-	font-size:16px;
+	font-size: 16px;
 	color: #ffb54a;
 	margin-left: 15px;
 	display: flex;
 	align-items: center;
 	gap: 8px;
+}
+
+.section-counter {
+}
+
+.section-counter .counter-item {
+	border-color: #e9ecef !important;
+}
+
+.section-counter .counter-item .counter-icon img {
+	width: 81px;
+	height: 81px;
+}
+
+.section-counter .counter-item .counter-content .counter-content_value {
+	font-size: 1.7em;
+	color: var(--text-primary);
+	font-weight: 700;
+}
+
+.section-counter .counter-item .counter-content .counter-content_title {
+	font-size: 1.15em;
+	color: var(--text-secondary);
 }
